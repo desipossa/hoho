@@ -2,7 +2,11 @@ $(function () {
     $('#portfolio').fullpage({
         anchors: ['p01', 'p02', 'p03', 'p04', 'p05'],
         afterLoad: function (anchorLink, index) {
-            $(this).addClass('on').siblings().removeClass('on');
+            const delay = () => {
+                $(this).addClass('on').siblings().removeClass('on');
+            }
+            setTimeout(delay)
+
             $('.nb li').eq(index - 1).addClass('on').siblings().removeClass('on');
         },
     });
