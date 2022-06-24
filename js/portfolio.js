@@ -2,10 +2,10 @@ $(function () {
     $('#portfolio').fullpage({
         anchors: ['p01', 'p02', 'p03', 'p04', 'p05'],
         afterLoad: function (anchorLink, index) {
-            const delay = () => {
+            const delayClass = () => {
                 $(this).addClass('on').siblings().removeClass('on');
             }
-            setTimeout(delay)
+            setTimeout(delayClass)
 
             $('.nb li').eq(index - 1).addClass('on').siblings().removeClass('on');
         },
